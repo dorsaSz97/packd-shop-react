@@ -1,3 +1,7 @@
+import energySmoothieThumbImg from '../assets/energy-smoothie-thumb.webp';
+import energySmoothie2 from '../assets/energy-smoothie-2.webp';
+import energySmoothie3 from '../assets/energy-smoothie-3.webp';
+
 const productsData = [
   // smoothie
 
@@ -102,7 +106,7 @@ const productsData = [
   },
 
   {
-    id: 'smoothie4r',
+    id: 'smoothie4e',
     name: 'ENERGY SMOOTHIE KIT',
     price: 2,
     description:
@@ -132,8 +136,8 @@ const productsData = [
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: energySmoothieThumbImg,
+    images: [energySmoothieThumbImg, energySmoothie2, energySmoothie3],
   },
 
   {
