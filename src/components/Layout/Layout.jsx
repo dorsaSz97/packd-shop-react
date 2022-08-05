@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
-import Header from '../Header/Header';
+import Header from '../Header';
 import Footer from '../Footer/Footer';
 
 import About from '../../pages/About';

@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* FONTS */
+@font-face {
+  font-family: 'Radial';
+  src: url('./assets/Neueradial-Regular.otf');
+}
+@font-face {
+  font-family: 'Radial';
+  src: url('./assets/Neueradial-Bold.otf');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'PP';
+  src: url('./assets/PPFormula-CondensedBlack.otf');
+}
+
+/* BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Radial', sans-serif;
+}
+
+a,
+button,
+input {
+  font: inherit;
+  /* border: none; */
+  outline: none;
+  display: inline-block;
+}
+
+.icon-stroke {
+  stroke-width: 2.5px;
+}
+
+.slide {
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.slide.active {
+  transform: scale(1.08);
+  opacity: 1;
+}
