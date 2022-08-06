@@ -36,3 +36,13 @@ const useSignup = () => {
 };
 
 export default useSignup;
+
+// SET_COUNT for sconst numbers
+// indexjs to every component
+// go to top uselocation
+// random recomended
+// when id changes change url and thennnnnn change the product in useeffect
+// folder data helpers structure
+// with context and redux
+// with axios and fetch
+// with framer motion and normal css

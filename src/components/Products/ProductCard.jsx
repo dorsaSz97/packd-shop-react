@@ -10,7 +10,6 @@ const ProductCard = ({ name, price, thumbnail, id }) => {
       </figure>
       <h3>{name}</h3>
       <span>{price}</span>
-      {/* <ButtonLink text="add to cart" isLink={false} /> */}
     </Link>
   );
 };

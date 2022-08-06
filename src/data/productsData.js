@@ -16,7 +16,11 @@ const productsData = [
       'Source of Magnesium which supports normal protein synthesis',
       'Rich in Iron, Folate, Vitamins B-6 and C ',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     ingredients: [
       'banana',
       'blueberries',
@@ -47,7 +51,11 @@ const productsData = [
       'Source of fibre for positive gut health',
       '1 1/2 of your 5 per day',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     ingredients: [
       'pineapple',
       'mango',
@@ -82,7 +90,11 @@ const productsData = [
       'Source of fibre for positive gut health',
       '1 1/2 of your 5 a day',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     ingredients: [
       'pineapple',
       'apple',
@@ -117,7 +129,11 @@ const productsData = [
       'Source of fibre for positive gut health',
       '1 1/2 of your 5 per day',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     ingredients: [
       'banana',
       'strawberries',
@@ -151,7 +167,11 @@ const productsData = [
       'Rich in Vitamin B6 which helps normal psychological function',
       'Source of Fibre and Potassium',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     ingredients: [
       'banana',
       'cherry',
@@ -185,7 +205,11 @@ const productsData = [
       'Vitamin C, Vitamin B-6 & Copper to support normal function of the immune system',
       'Source of Iron',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     ingredients: [
       'banana',
       'avocado',
@@ -386,7 +410,11 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     thumbnail: '',
     images: [],
   },
@@ -402,7 +430,11 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: ['Gluten Free', 'Vegan', 'Freshly Frozen'],
+    diets: [
+      { title: 'Gluten Free', icon: '' },
+      { title: 'Vegan', icon: '' },
+      { text: 'Freshly Frozen', icon: '' },
+    ],
     thumbnail: '',
     images: [],
   },

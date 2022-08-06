@@ -81,8 +81,8 @@ const Header = () => {
         )}
       </AnimatePresence>
 
-      {/* {isCartModalVisible && <CartModal />} */}
-      <nav className=" z-[100] fixed top-0 right-0 left-0 flex justify-between items-center py-5 px-7 bg-[#FEF9EF] text-lg">
+      {isCartModalVisible && <CartModal />}
+      <nav className=" z-[100] fixed top-0 right-0 left-0 flex justify-between items-center py-5 px-7 bg-[#FEF9EF] text-lg shadow-xl  border-b-2 border-black">
         <Link to="/" className="inline-block">
           <h1 className="text-3xl font-bold tracking-tighter">PACKd</h1>
         </Link>

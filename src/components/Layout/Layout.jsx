@@ -1,26 +1,15 @@
-import React, { Fragment } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React from 'react';
 
 import Header from '../Header';
-import Footer from '../Footer/Footer';
+import Footer from '../Footer';
 
-import About from '../../pages/About';
-import Home from '../../pages/Home';
-import Products from '../../pages/Products';
-import Product from '../../pages/Product';
-
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
-    <Fragment>
+    <div className="pt-36">
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<Product />} />
-      </Routes>
+      <main>{children}</main>
       <Footer />
-    </Fragment>
+    </div>
   );
 };
 

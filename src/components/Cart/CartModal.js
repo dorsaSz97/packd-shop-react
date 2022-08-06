@@ -18,7 +18,7 @@ const CartModalContent = () => {
     dispatch(cartActions.removeItem(id));
   };
   return (
-    <div className="absolute top-0 left-0 right-0 bottom-0 w-screen h-screen bg-red-300 text-2xl text-blue-900">
+    <div className="absolute top-[20%] left-0 right-0 bottom-0 w-screen h-screen bg-red-300 text-2xl text-blue-900">
       <p>CartModal</p>
       <ul>
         {cartItems.map(item => {

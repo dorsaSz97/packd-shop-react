@@ -11,21 +11,24 @@ const cartSlice = createSlice({
   initialState: initialCartState,
   reducers: {
     addItem(state, action) {
+      const qtt = action.payload.quantity ? action.payload.quantity : 1;
       if (
         state.items.filter(item => item.id === action.payload.id).length === 0
       ) {
-        state.items.push({ ...action.payload, quantity: 1 });
+        state.items.push({ ...action.payload, quantity: qtt });
       } else {
         const currIndex = state.items.findIndex(
           item => item.id === action.payload.id
         );
         state.items[currIndex] = {
           ...state.items[currIndex],
-          quantity: state.items[currIndex].quantity + 1,
+          quantity: state.items[currIndex].quantity + qtt,
         };
       }
-      state.totalPrice = state.totalPrice + action.payload.price;
-      state.totalQuantity++;
+      state.totalPrice = state.totalPrice + action.payload.price * qtt;
+      state.totalQuantity = state.totalQuantity + qtt;
+
+      localStorage.setItem('cartItems', JSON.stringify(state.items));
     },
     removeItem(state, action) {
       const currItemIndex = state.items.findIndex(
@@ -41,6 +44,10 @@ const cartSlice = createSlice({
       }
       state.totalQuantity--;
       state.totalPrice = state.totalPrice - currItem.price;
+    },
+    setCart(state, action) {
+      state.items = [...action.payload];
+      state.totalQuantity = action.payload.length;
     },
   },
 });

@@ -6,7 +6,7 @@ import styles from './Hero.module.css';
 const Hero = () => {
   return (
     <section
-      className={`${styles.hero} relative pt-36 pb-20 px-8 bg-hero-img bg-cover bg-right font-radial text-xl`}
+      className={`${styles.hero} relative py-20 px-8 bg-hero-img bg-cover bg-right font-radial text-xl`}
     >
       <div className=" md:w-1/2 text-white relative z-[1]">
         <h2 className="font-pp text-[4.5rem] uppercase leading-none tracking-wide">
