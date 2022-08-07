@@ -1,130 +1,64 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+
+import useRefine from '../hooks/useRefine';
+import usePagination from '../hooks/usePagination';
+
 import ProductCard from '../components/Products/ProductCard';
+
 import productsData from '../data/productsData';
+import SliderBanner from '../components/SliderBanner/SliderBanner';
 
-// const filterProducts = (data, filter) => {
-//   return data.filter(item => item.category === filter);
-// };
-
-// let filteredProducts = productsData;
-// if (filterParam) {
-//   filteredProducts = filterProducts(productsData, filterParam);
-// }
-
-// const [updatedProducts, setUpdatedProducts] = useState(
-//   filterParam
-//     ? productsData.filter(pro => pro.category === filterParam)
-//     : productsData
-// );
-
-// // const newar = productsArr;
-// const pagesCount = Math.ceil(
-//   (filterParam && filterParam !== 'all'
-//     ? productsData.filter(pro => pro.category === filterParam).length
-//     : productsData.length) / 3
-// );
-// const paginations = [...Array(pagesCount)].map(x => 0);
-// console.log(productsArr, productsData);
-
-// const changePageHandler = useCallback(page => {
-//   // console.log(productsData.slice(3, 5));
-//   setProductsArr(productsData.slice(3 * (page - 1), 3 * (page - 1) + 3)); // 0, 4, 8
-// }, []);
-
-// useEffect(() => {
-//   changePageHandler(1);
-// }, [changePageHandler]);
-
-// if (filter === 'all') {
-//   filter = null;
-//   setProductsArr(productsData.slice(0, 3));
-// } else {
-//     setUpdatedProducts(
-//   productsData.filter(product => product.category.toLowerCase() === e.target.value.toLowerCase()).slice(0, 3)
-// );
-// }
+const data = [...productsData];
 
 const Products = () => {
-  let products = [...productsData];
   const navigate = useNavigate();
-
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const filterParam = queryParams.get('filter');
   const sortParam = queryParams.get('sort');
 
-  console.log(sortParam, filterParam);
+  const { refinedProducts } = useRefine(data, {
+    filter: filterParam,
+    sort: sortParam,
+  });
 
-  const [updatedProducts, setUpdatedProducts] = useState([]);
+  const { currentPage, goToPage, totalPages, displayedData } = usePagination([
+    ...refinedProducts,
+  ]);
 
-  useEffect(() => {
-    let productsArr = [...productsData];
-    if (sortParam) {
-      let products = [...productsData];
-
-      switch (sortParam) {
-        case 'AtoZ':
-          products = products.sort((productA, productB) => {
-            if (productA.name < productB.name) {
-              return -1;
-            }
-            if (productA.name > productB.name) {
-              return 1;
-            }
-            return 0;
-          });
-          break;
-        case 'ZtoA':
-          products = products.sort((productA, productB) => {
-            if (productA.name > productB.name) {
-              return -1;
-            }
-            if (productA.name < productB.name) {
-              return 1;
-            }
-            return 0;
-          });
-          break;
-        case 'LtoH':
-          products = products.sort(
-            (productA, productB) => productA.price - productB.price
-          );
-          break;
-        case 'HtoL':
-          products = products.sort(
-            (productA, productB) => productB.price - productA.price
-          );
-          break;
-        default:
-          break;
-      }
-
-      productsArr = [...products];
-    }
-
-    if (filterParam) {
-      productsArr = productsArr.filter(
-        product => product.category.toLowerCase() === filterParam.toLowerCase()
-      );
-    }
-
-    setUpdatedProducts(productsArr);
-  }, [sortParam, filterParam]);
+  let pagination = [];
+  for (let i = 0; i < totalPages; i++) {
+    pagination.push(
+      <span
+        className={`mr-10 ${
+          currentPage === i + 1 ? 'bg-red-500' : 'cursor-pointer'
+        }`}
+        key={i}
+        onClick={() => changePageHandler(i + 1)}
+      >
+        {i + 1}
+      </span>
+    );
+  }
 
   const changeSortHandler = e => {
     let sortValue = e.target.value;
 
-    navigate(
-      `?sort=${sortValue}${filterParam ? `&filter=${filterParam}` : ''}`,
-      { replace: false }
-    );
+    if (sortValue || filterParam) {
+      navigate(
+        `?sort=${sortValue}${filterParam ? `&filter=${filterParam}` : ''}`,
+        { replace: false }
+      );
+    } else {
+      navigate('/products', { replace: false });
+    }
   };
 
   const changeFilterHandler = e => {
     let filterValue = e.target.value;
 
-    if (filterValue) {
+    if (filterValue || sortParam) {
       navigate(
         `?filter=${filterValue}${sortParam ? `&sort=${sortParam}` : ''}`,
         { replace: false }
@@ -134,9 +68,14 @@ const Products = () => {
     }
   };
 
+  const changePageHandler = index => {
+    goToPage(index);
+  };
+
   return (
     <div>
       {/* banner */}
+      <SliderBanner />
 
       {/* filter select */}
 
@@ -168,7 +107,7 @@ const Products = () => {
       </select>
 
       {/* products gallery */}
-      {updatedProducts.map(product => {
+      {displayedData().map(product => {
         return (
           <ProductCard
             key={Math.random() * 1000}
@@ -180,17 +119,7 @@ const Products = () => {
       })}
 
       {/* pagination */}
-      {/* {paginations.map((page, index) => {
-        return (
-          <span
-            className="mr-10"
-            key={index}
-            onClick={() => changePageHandler(index + 1)}
-          >
-            {index + 1}
-          </span>
-        );
-      })} */}
+      {pagination}
     </div>
   );
 };

@@ -233,22 +233,6 @@ const productsData = [
   },
 
   // fruit
-  {
-    id: 'fruit1r',
-    name: 'ORGANIC RASPBERRIES',
-    price: 5.3,
-    description:
-      'Hand-picked whole organic frozen raspberries certified by the UK soil association. \n We have carefully sourced the best quality raspberries.  We freeze once perfectly ripe to lock in flavour.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks',
-
-    ingredients: [{ name: 'Organic Raspberries', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
-    diets: [],
-    thumbnail: '',
-    images: [],
-  },
 
   {
     id: 'fruit2c',
@@ -275,6 +259,22 @@ const productsData = [
       'Sweet organic frozen strawberries certified by the UK soil association. \n  We have carefully sourced the best quality strawberries.  We freeze once perfectly ripe to lock in flavour.  Diced and ready to use. \n Perfect for healthy smoothies, breakfast, baking and healthy snacks.',
 
     ingredients: [{ name: 'Organic Strawberries', amount: 100 }],
+    category: 'fruit',
+    directions: [
+      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
+    ],
+    diets: [],
+    thumbnail: '',
+    images: [],
+  },
+  {
+    id: 'fruit1r',
+    name: 'ORGANIC RASPBERRIES',
+    price: 5.3,
+    description:
+      'Hand-picked whole organic frozen raspberries certified by the UK soil association. \n We have carefully sourced the best quality raspberries.  We freeze once perfectly ripe to lock in flavour.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks',
+
+    ingredients: [{ name: 'Organic Raspberries', amount: 100 }],
     category: 'fruit',
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
