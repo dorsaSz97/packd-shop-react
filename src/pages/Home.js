@@ -28,14 +28,14 @@ const productSections = [
     desc: 'Using the best plant-based ingredients and carefully selected superfood blends, each unique recipe kit is delicious, perfectly portioned and packed full of goodness for making eating well, easy',
     text: 'shop smoothies',
     image: smoothieImg,
-    path: '/products/?filter=smoothie',
+    path: '/products/?filter=smoothies',
   },
   {
     title: 'packd organic vegetables',
     desc: 'We have selected the tastiest varieties of organic vegetables for our range. We have prepared them already so you can enjoy at home with zero faff.',
     text: 'shop vegetables',
     image: vegetableImg,
-    path: '/products/?filter=vegetable',
+    path: '/products/?filter=vegetables',
   },
 ];
 

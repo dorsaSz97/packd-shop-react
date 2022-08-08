@@ -1,10 +1,76 @@
-import energySmoothieThumbImg from '../assets/energy-smoothie-thumb.webp';
-import energySmoothie2 from '../assets/energy-smoothie-2.webp';
-import energySmoothie3 from '../assets/energy-smoothie-3.webp';
+import powerSmoothie1 from '../assets/products/smoothies/power1.webp';
+import powerSmoothie2 from '../assets/products/smoothies/power2.webp';
+import powerSmoothie3 from '../assets/products/smoothies/power3.webp';
+import boostSmoothie1 from '../assets/products/smoothies/boost1.webp';
+import boostSmoothie2 from '../assets/products/smoothies/boost2.webp';
+import boostSmoothie3 from '../assets/products/smoothies/boost3.webp';
+import energySmoothie1 from '../assets/products/smoothies/energy1.webp';
+import energySmoothie2 from '../assets/products/smoothies/energy2.webp';
+import energySmoothie3 from '../assets/products/smoothies/energy3.webp';
+import nourishSmoothie1 from '../assets/products/smoothies/nourish1.webp';
+import nourishSmoothie2 from '../assets/products/smoothies/nourish2.webp';
+import nourishSmoothie3 from '../assets/products/smoothies/nourish3.webp';
+import replenishSmoothie1 from '../assets/products/smoothies/replenish1.webp';
+import replenishSmoothie2 from '../assets/products/smoothies/replenish2.webp';
+import replenishSmoothie3 from '../assets/products/smoothies/replenish3.webp';
+import vitalitySmoothie1 from '../assets/products/smoothies/vitality1.webp';
+import vitalitySmoothie2 from '../assets/products/smoothies/vitality2.webp';
+import vitalitySmoothie3 from '../assets/products/smoothies/vitality3.webp';
+
+import avocadoFruit1 from '../assets/products/fruit/avocado1.webp';
+import avocadoFruit2 from '../assets/products/fruit/avocado2.webp';
+import bananaFruit1 from '../assets/products/fruit/banana1.webp';
+import bananaFruit2 from '../assets/products/fruit/banana2.webp';
+import bananaFruit3 from '../assets/products/fruit/banana3.webp';
+import blueberryFruit1 from '../assets/products/fruit/blueberry1.webp';
+import blueberryFruit2 from '../assets/products/fruit/blueberry2.webp';
+import blueberryFruit3 from '../assets/products/fruit/blueberry3.webp';
+import berryFruit1 from '../assets/products/fruit/berry1.webp';
+import berryFruit2 from '../assets/products/fruit/berry2.webp';
+import berryFruit3 from '../assets/products/fruit/berry3.webp';
+import cherryFruit1 from '../assets/products/fruit/cherry1.webp';
+import cherryFruit2 from '../assets/products/fruit/cherry2.webp';
+import cherryFruit3 from '../assets/products/fruit/cherry3.webp';
+import mangoFruit1 from '../assets/products/fruit/mango1.webp';
+import mangoFruit2 from '../assets/products/fruit/mango2.webp';
+import mangoFruit3 from '../assets/products/fruit/mango3.webp';
+import mangoFruit4 from '../assets/products/fruit/mango4.webp';
+import orchardFruit1 from '../assets/products/fruit/orchard1.webp';
+import orchardFruit2 from '../assets/products/fruit/orchard2.webp';
+import orchardFruit3 from '../assets/products/fruit/orchard3.webp';
+import peachFruit1 from '../assets/products/fruit/peach1.webp';
+import peachFruit2 from '../assets/products/fruit/peach2.webp';
+import peachFruit3 from '../assets/products/fruit/peach3.webp';
+import peachFruit4 from '../assets/products/fruit/peach4.webp';
+import raspberryFruit1 from '../assets/products/fruit/raspberry1.webp';
+import raspberryFruit2 from '../assets/products/fruit/raspberry2.webp';
+import raspberryFruit3 from '../assets/products/fruit/raspberry3.webp';
+import raspberryFruit4 from '../assets/products/fruit/raspberry4.webp';
+import strawberryFruit1 from '../assets/products/fruit/strawberry1.webp';
+import strawberryFruit2 from '../assets/products/fruit/strawberry2.webp';
+import strawberryFruit3 from '../assets/products/fruit/strawberry3.webp';
+import tropicalFruit1 from '../assets/products/fruit/tropical1.webp';
+import tropicalFruit2 from '../assets/products/fruit/tropical2.webp';
+import tropicalFruit3 from '../assets/products/fruit/tropical3.webp';
+
+import cauliflowerVeg1 from '../assets/products/vegetables/cauliflower1.webp';
+import cauliflowerVeg2 from '../assets/products/vegetables/cauliflower2.webp';
+import cauliflowerVeg3 from '../assets/products/vegetables/cauliflower3.webp';
+import cornVeg1 from '../assets/products/vegetables/corn1.webp';
+import cornVeg2 from '../assets/products/vegetables/corn2.webp';
+import cornVeg3 from '../assets/products/vegetables/corn3.webp';
+import poisVeg1 from '../assets/products/vegetables/pois1.webp';
+import poisVeg2 from '../assets/products/vegetables/pois2.webp';
+import poisVeg3 from '../assets/products/vegetables/pois3.webp';
+import potatoeVeg1 from '../assets/products/vegetables/potatoe1.webp';
+import potatoeVeg2 from '../assets/products/vegetables/potatoe2.webp';
+import potatoeVeg3 from '../assets/products/vegetables/potatoe3.webp';
+import spinachVeg1 from '../assets/products/vegetables/spinach1.webp';
+import spinachVeg2 from '../assets/products/vegetables/spinach2.webp';
+import spinachVeg3 from '../assets/products/vegetables/spinach3.webp';
 
 const productsData = [
   // smoothie
-
   {
     id: 'smoothie1p',
     name: 'POWER SMOOTHIE KIT',
@@ -16,11 +82,7 @@ const productsData = [
       'Source of Magnesium which supports normal protein synthesis',
       'Rich in Iron, Folate, Vitamins B-6 and C ',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
+
     ingredients: [
       'banana',
       'blueberries',
@@ -32,12 +94,14 @@ const productsData = [
       'pumpkin seed',
       'maca',
     ],
-    category: 'smoothie',
+    category: 'smoothies',
     directions: [
       'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
+    thumbnail: powerSmoothie1,
+    images: [powerSmoothie1, powerSmoothie2, powerSmoothie3],
   },
 
   {
@@ -49,13 +113,9 @@ const productsData = [
     benefits: [
       'Helps function of immune system',
       'Source of fibre for positive gut health',
-      '1 1/2 of your 5 per day',
+      '2 1/2 of your 5 per day',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
+
     ingredients: [
       'pineapple',
       'mango',
@@ -68,14 +128,14 @@ const productsData = [
       'sunflower seed',
       'pumpkin seed',
     ],
-    category: 'smoothie',
+    category: 'smoothies',
     directions: [
       'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: vitalitySmoothie1,
+    images: [vitalitySmoothie1, vitalitySmoothie2, vitalitySmoothie3],
   },
 
   {
@@ -90,11 +150,7 @@ const productsData = [
       'Source of fibre for positive gut health',
       '1 1/2 of your 5 a day',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
+
     ingredients: [
       'pineapple',
       'apple',
@@ -107,14 +163,14 @@ const productsData = [
       'wheatgrass',
       'barleygrass',
     ],
-    category: 'smoothie',
+    category: 'smoothies',
     directions: [
       'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: replenishSmoothie1,
+    images: [replenishSmoothie1, replenishSmoothie2, replenishSmoothie3],
   },
 
   {
@@ -129,11 +185,7 @@ const productsData = [
       'Source of fibre for positive gut health',
       '1 1/2 of your 5 per day',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
+
     ingredients: [
       'banana',
       'strawberries',
@@ -146,14 +198,14 @@ const productsData = [
       'cacao',
       'guarana',
     ],
-    category: 'smoothie',
+    category: 'smoothies',
     directions: [
       'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
-    thumbnail: energySmoothieThumbImg,
-    images: [energySmoothieThumbImg, energySmoothie2, energySmoothie3],
+    thumbnail: energySmoothie1,
+    images: [energySmoothie1, energySmoothie2, energySmoothie3],
   },
 
   {
@@ -167,11 +219,7 @@ const productsData = [
       'Rich in Vitamin B6 which helps normal psychological function',
       'Source of Fibre and Potassium',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
+
     ingredients: [
       'banana',
       'cherry',
@@ -184,14 +232,14 @@ const productsData = [
       'acerola',
       'siberian ginseng',
     ],
-    category: 'smoothie',
+    category: 'smoothies',
     directions: [
       'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: boostSmoothie1,
+    images: [boostSmoothie1, boostSmoothie2, boostSmoothie3],
   },
 
   {
@@ -205,11 +253,7 @@ const productsData = [
       'Vitamin C, Vitamin B-6 & Copper to support normal function of the immune system',
       'Source of Iron',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
+
     ingredients: [
       'banana',
       'avocado',
@@ -222,18 +266,17 @@ const productsData = [
       'flax seed',
       'baobab',
     ],
-    category: 'smoothie',
+    category: 'smoothies',
     directions: [
       'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
       'Add your fruit and veg pouch and superfood sachet and blend',
       'Enjoy your freshly made superfood smoothie',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: nourishSmoothie1,
+    images: [nourishSmoothie1, nourishSmoothie2, nourishSmoothie3],
   },
 
   // fruit
-
   {
     id: 'fruit2c',
     name: 'ORGANIC CHERRIES',
@@ -246,9 +289,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: cherryFruit1,
+    images: [cherryFruit1, cherryFruit2, cherryFruit3],
   },
 
   {
@@ -263,10 +305,10 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: strawberryFruit1,
+    images: [strawberryFruit1, strawberryFruit2, strawberryFruit3],
   },
+
   {
     id: 'fruit1r',
     name: 'ORGANIC RASPBERRIES',
@@ -279,9 +321,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: raspberryFruit1,
+    images: [raspberryFruit1, raspberryFruit2, raspberryFruit3],
   },
 
   {
@@ -296,9 +337,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: blueberryFruit1,
+    images: [blueberryFruit1, blueberryFruit2, blueberryFruit3],
   },
 
   {
@@ -313,9 +353,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: peachFruit1,
+    images: [peachFruit1, peachFruit2, peachFruit3],
   },
 
   {
@@ -330,9 +369,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: avocadoFruit1,
+    images: [avocadoFruit1, avocadoFruit2],
   },
 
   {
@@ -347,9 +385,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: mangoFruit1,
+    images: [mangoFruit1, mangoFruit2, mangoFruit3],
   },
 
   {
@@ -368,9 +405,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: berryFruit1,
+    images: [berryFruit1, berryFruit2, berryFruit3],
   },
 
   {
@@ -389,9 +425,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [],
-    thumbnail: '',
-    images: [],
+    thumbnail: orchardFruit1,
+    images: [orchardFruit1, orchardFruit2, orchardFruit3],
   },
 
   {
@@ -410,11 +445,6 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
-    ],
     thumbnail: '',
     images: [],
   },
@@ -430,13 +460,80 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    diets: [
-      { title: 'Gluten Free', icon: '' },
-      { title: 'Vegan', icon: '' },
-      { text: 'Freshly Frozen', icon: '' },
+    thumbnail: bananaFruit1,
+    images: [bananaFruit1, bananaFruit2, bananaFruit3],
+  },
+
+  // vegetables
+  {
+    id: 'veggie1s',
+    name: 'ORGANIC SPINACH',
+    price: 3.3,
+    description:
+      'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day. \n We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient, for sautéing or adding to your favourite stir-fry. \n All our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: [{ name: 'Spinach', amount: 100 }],
+    category: 'vegetables',
+    directions: [
+      'Blend from frozen. \n Boil from frozen: Place in a saucepan of boiling water. Simmer for 1-2 minutes. Drain and serve.\n Sauté from frozen: Place in pan or wok and sauté for 4 mins on a high heat. Ensure food is cooked until piping hot. \n Season to taste.',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: spinachVeg1,
+    images: [spinachVeg1, spinachVeg2, spinachVeg3],
+  },
+  {
+    id: 'veggie2p',
+    name: 'ORGANIC SWEET POTATO',
+    price: 3.3,
+    description:
+      'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: [{ name: 'Sweet Potatoe', amount: 100 }],
+    category: 'vegetables',
+    directions: [
+      'Blend from frozen. \n Oven cook from Frozen: 220°C/ Fan 200°C/Gas 7 16-20 mins. Place on a lightly oiled baking tray in the centre of a pre-heated oven for 16-20 minutes. Turn halfway through cooking. Ensure food is cooked until piping hot.\n Season to taste.',
+    ],
+    thumbnail: potatoeVeg1,
+    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+  },
+  {
+    id: 'veggie3pp',
+    name: 'ORGANIC PETIT POIS',
+    price: 3.3,
+    description:
+      'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: [{ name: 'Petit pois', amount: 100 }],
+    category: 'vegetables',
+    directions: [
+      'Boil from frozen: Place in a saucepan of boiling water. Simmer for 2 minutes. Drain and serve. Ensure food is cooked until piping hot.\n Season to taste.',
+    ],
+    thumbnail: potatoeVeg1,
+    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+  },
+  {
+    id: 'veggie4cr',
+    name: 'ORGANIC CAULIFLOWER RICE',
+    price: 3.3,
+    description:
+      'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: [{ name: 'Cauliflower', amount: 100 }],
+    category: 'vegetables',
+    directions: [
+      'Blend from frozen.\n Sauté from frozen: Place in pan or wok and sauté for 4 mins on a high heat. Ensure food is cooked until piping hot.\nSeason to taste.',
+    ],
+    thumbnail: potatoeVeg1,
+    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+  },
+  {
+    id: 'veggie5sc',
+    name: 'ORGANIC SWEETCORN',
+    price: 3.3,
+    description:
+      'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: [{ name: 'Corn', amount: 100 }],
+    category: 'vegetables',
+    directions: [
+      'Boil from frozen: Place in a saucepan of boiling water. Simmer for 2 minutes. Drain and serve. Ensure food is cooked until piping hot.\nSeason to taste.',
+    ],
+    thumbnail: potatoeVeg1,
+    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
   },
 ];
 

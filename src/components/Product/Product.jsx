@@ -33,17 +33,7 @@ const Product = ({ product }) => {
         <span>{product.price}</span>
         <ul>
           {product.ingredients.map(ing => {
-            if (product.category === 'box') return ''; //TODO:
             return <li key={Math.random()}>{ing}</li>;
-          })}
-        </ul>
-        <ul>
-          {product.diets.map(diet => {
-            return (
-              <li key={Math.random()}>
-                {diet.icon} {diet.title}
-              </li>
-            );
           })}
         </ul>
         <h3>Quantity</h3>
@@ -60,7 +50,12 @@ const Product = ({ product }) => {
             />
             <button type="button">+</button>
           </div>
-          <button onClick={addItemHandler}>Add to cart</button>
+          <button
+            onClick={addItemHandler}
+            className="inline-block py-4 px-11 mt-5 border-[3px] border-black text-[0.84rem] uppercase font-bold text-black bg-white hover:bg-black hover:text-white transition-all ease-in-out"
+          >
+            Add to cart
+          </button>
         </form>
         <p>{product.description}</p>
       </div>

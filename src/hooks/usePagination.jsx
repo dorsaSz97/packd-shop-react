@@ -5,11 +5,9 @@ const usePagination = (data, perPage = PRODUCTS_PER_PAGE) => {
   const totalPages = Math.ceil(data.length / perPage);
   const [currentPage, setCurrentPage] = useState(1);
 
-  const displayedData = useCallback(() => {
-    const startingIndex = (currentPage - 1) * perPage;
-    const endingIndex = startingIndex + perPage;
-    return data.slice(startingIndex, endingIndex);
-  }, [data, perPage, currentPage]);
+  const startingIndex = (currentPage - 1) * perPage;
+  const endingIndex = startingIndex + perPage;
+  const displayedData = data.slice(startingIndex, endingIndex);
 
   const goNextPage = () => {
     setCurrentPage(currentPage => Math.min(currentPage + 1, totalPages));
