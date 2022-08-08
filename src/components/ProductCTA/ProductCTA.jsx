@@ -1,7 +1,7 @@
 import React from 'react';
 import ButtonLink from '../UI/ButtonLink';
 
-const ProductSection = ({ title, desc, text, path, imgPath }) => {
+const ProductCTA = ({ title, desc, text, path, imgPath }) => {
   return (
     <section className="flex flex-col items-center justify-center gap-10 bg-[#FEF9EF] pt-20 pb-10 px-5">
       <figure>
@@ -18,4 +18,4 @@ const ProductSection = ({ title, desc, text, path, imgPath }) => {
   );
 };
 
-export default ProductSection;
+export default ProductCTA;

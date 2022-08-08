@@ -1,44 +1,25 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const footerLinks = [
-  {
-    name: 'contact us',
-    path: '/',
-  },
-  {
-    name: 'legal stuff',
-    path: '/',
-  },
-  {
-    name: 'about us',
-    path: '/',
-  },
-  {
-    name: 'posts',
-    path: '/',
-  },
-  {
-    name: 'our shop',
-    path: '/',
-  },
-];
+import FOOTER_LINKS from '../../data/footerLinks';
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 px-4">
+    <footer className="flex flex-col justify-between gap-20 bg-dark text-white py-10 px-4">
       <ul className="flex flex-col ">
-        {footerLinks.map(link => {
+        {FOOTER_LINKS.map(link => {
           return (
-            <li
+            <Link
               key={link.name}
-              className="text-[14px] py-5 px-2 border-white border-b-2 uppercase"
+              to="/home"
+              className="py-5 px-2 border-white border-opacity-40 border-b-[0.5px] text-[14px] uppercase"
             >
               {link.name}
-            </li>
+            </Link>
           );
         })}
       </ul>
-      <p className="text-[10px] mt-20">
+      <p className="text-[10px]">
         © 2022 PACKD All rights reserved. PACK’D is a limited company registered
         in England and Wales company number 9005105.
       </p>

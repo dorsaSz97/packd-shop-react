@@ -9,22 +9,21 @@ module.exports = {
       md: '768px',
       // => @media (min-width: 768px) { ... }
 
-      lg: '1024px',
-      // => @media (min-width: 1024px) { ... }
+      lg: '992px',
+      // => @media (min-width: 992px) { ... }
 
-      xl: '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+      xl: '1200px',
+      // => @media (min-width: 1200px) { ... }
     },
+
     extend: {
-      backgroundImage: {
-        'hero-img': "url('assets/hero.webp')",
-      },
       fontFamily: {
         radial: ['Radial', 'sans-serif'],
         pp: ['PP', 'sans-serif'],
+      },
+      colors: {
+        primary: '#FEF9EF',
+        dark: '#0A0A0A',
       },
     },
   },

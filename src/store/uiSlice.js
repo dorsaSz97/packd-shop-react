@@ -1,15 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialUISlice = {
-  isVisible: false,
+  isModalVisible: false,
+  isHamburgerMenuVisible: false,
 };
 
 const uiSlice = createSlice({
   name: 'ui',
   initialState: initialUISlice,
   reducers: {
-    toggleCart(state, action) {
-      state.isVisible = !state.isVisible;
+    toggleModal(state) {
+      state.isModalVisible = !state.isModalVisible;
+    },
+    toggleMenu(state) {
+      state.isHamburgerMenuVisible = !state.isHamburgerMenuVisible;
     },
   },
 });

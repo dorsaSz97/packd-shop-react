@@ -5,53 +5,83 @@
 /* FONTS */
 @font-face {
   font-family: 'Radial';
-  src: url('./assets/Neueradial-Regular.otf');
+  src: url('./assets/fonts/radial-light.ttf');
+  font-weight: 300;
 }
 @font-face {
   font-family: 'Radial';
-  src: url('./assets/Neueradial-Bold.otf');
-  font-weight: bold;
+  src: url('./assets/fonts/radial-regular.ttf');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Radial';
+  src: url('./assets/fonts/radial-medium.ttf');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Radial';
+  src: url('./assets/fonts/radial-bold.ttf');
+  font-weight: 700;
 }
 @font-face {
   font-family: 'PP';
-  src: url('./assets/PPFormula-CondensedBlack.otf');
+  src: url('./assets/fonts/pp-formula-light.otf');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'PP';
+  src: url('./assets/fonts/pp-formula-bold.otf');
+  font-weight: 700;
 }
 
 /* BASE */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 html {
+  font-size: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 body {
+  min-height: 100vh;
   font-family: 'Radial', sans-serif;
   background-color: #fef9ef;
+  scroll-behavior: smooth;
 }
 
-a,
+/* make form elements easier to work with */
+input,
 button,
-input {
-  font: inherit;
-  /* border: none; */
-  outline: none;
+textarea,
+select {
   display: inline-block;
+  font: inherit;
+}
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  outline: none;
 }
 
-.icon-stroke {
-  stroke-width: 2.5px;
+/* make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-.slide {
-  opacity: 0;
-  transition: all 1s ease;
+ul {
+  list-style: none;
 }
-
-.slide.active {
-  transform: scale(1.08);
-  opacity: 1;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }

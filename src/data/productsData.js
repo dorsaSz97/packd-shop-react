@@ -70,19 +70,14 @@ import spinachVeg2 from '../assets/products/vegetables/spinach2.webp';
 import spinachVeg3 from '../assets/products/vegetables/spinach3.webp';
 
 const productsData = [
-  // smoothie
   {
     id: 'smoothie1p',
     name: 'POWER SMOOTHIE KIT',
+    category: 'smoothies',
+
     price: 2,
     description:
       'A delicious chocolatey blend of frozen fruit, vegetables, cacao and plant-based protein. Naturally high in protein and Vitamin C it is designed to help support muscle maintenance and reduce tiredness and fatigue.',
-    benefits: [
-      'Source of Zinc which helps maintain normal skin, hair and nails',
-      'Source of Magnesium which supports normal protein synthesis',
-      'Rich in Iron, Folate, Vitamins B-6 and C ',
-    ],
-
     ingredients: [
       'banana',
       'blueberries',
@@ -94,12 +89,7 @@ const productsData = [
       'pumpkin seed',
       'maca',
     ],
-    category: 'smoothies',
-    directions: [
-      'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
-      'Add your fruit and veg pouch and superfood sachet and blend',
-      'Enjoy your freshly made superfood smoothie',
-    ],
+
     thumbnail: powerSmoothie1,
     images: [powerSmoothie1, powerSmoothie2, powerSmoothie3],
   },
@@ -107,15 +97,11 @@ const productsData = [
   {
     id: 'smoothie2v',
     name: 'VITALITY SMOOTHIE KIT',
+    category: 'smoothies',
+
     price: 2,
     description:
-      'A delicious blend of frozen fruits and specially selected superfoods designed to give your immune system a natural boost.  Our recipes are 100% natural and packed with vitamins and minerals.',
-    benefits: [
-      'Helps function of immune system',
-      'Source of fibre for positive gut health',
-      '2 1/2 of your 5 per day',
-    ],
-
+      'A delicious blend of frozen fruits and specially selected superfoods designed to give your immune system a natural boost. Our recipes are 100% natural and packed with vitamins and minerals.',
     ingredients: [
       'pineapple',
       'mango',
@@ -128,12 +114,7 @@ const productsData = [
       'sunflower seed',
       'pumpkin seed',
     ],
-    category: 'smoothies',
-    directions: [
-      'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
-      'Add your fruit and veg pouch and superfood sachet and blend',
-      'Enjoy your freshly made superfood smoothie',
-    ],
+
     thumbnail: vitalitySmoothie1,
     images: [vitalitySmoothie1, vitalitySmoothie2, vitalitySmoothie3],
   },
@@ -141,16 +122,11 @@ const productsData = [
   {
     id: 'smoothie3r',
     name: 'REPLENISH SMOOTHIE KIT',
+    category: 'smoothies',
+
     price: 2,
     description:
       'A delicious Multi-Vit smoothie mix designed to support overall wellbeing for body and mind. Our recipes are 100% natural and packed with vitamins and minerals.',
-    benefits: [
-      'Helps protect cells from oxidative stress',
-      'Helps to maintain healthy skin',
-      'Source of fibre for positive gut health',
-      '1 1/2 of your 5 a day',
-    ],
-
     ingredients: [
       'pineapple',
       'apple',
@@ -163,12 +139,7 @@ const productsData = [
       'wheatgrass',
       'barleygrass',
     ],
-    category: 'smoothies',
-    directions: [
-      'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
-      'Add your fruit and veg pouch and superfood sachet and blend',
-      'Enjoy your freshly made superfood smoothie',
-    ],
+
     thumbnail: replenishSmoothie1,
     images: [replenishSmoothie1, replenishSmoothie2, replenishSmoothie3],
   },
@@ -176,16 +147,11 @@ const productsData = [
   {
     id: 'smoothie4e',
     name: 'ENERGY SMOOTHIE KIT',
+    category: 'smoothies',
+
     price: 2,
     description:
       'A delicious blend of frozen fruits, vegetables and specially selected superfoods designed to deliver a natural energy boost. Our recipes are 100% natural and packed with vitamins and minerals.',
-    benefits: [
-      'Contains natural source of caffeine',
-      'Helps reduce tiredness and fatigue',
-      'Source of fibre for positive gut health',
-      '1 1/2 of your 5 per day',
-    ],
-
     ingredients: [
       'banana',
       'strawberries',
@@ -198,12 +164,7 @@ const productsData = [
       'cacao',
       'guarana',
     ],
-    category: 'smoothies',
-    directions: [
-      'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
-      'Add your fruit and veg pouch and superfood sachet and blend',
-      'Enjoy your freshly made superfood smoothie',
-    ],
+
     thumbnail: energySmoothie1,
     images: [energySmoothie1, energySmoothie2, energySmoothie3],
   },
@@ -211,15 +172,11 @@ const productsData = [
   {
     id: 'smoothie5b',
     name: 'BOOST SMOOTHIE KIT',
+    category: 'smoothies',
+
     price: 2,
     description:
       'A delicious blend of frozen fruits, vegetables and specially selected superfoods designed to boost energy and focus. Our recipes are 100% natural and packed with vitamins and minerals.',
-    benefits: [
-      'High in Vitamin C to boost immunity',
-      'Rich in Vitamin B6 which helps normal psychological function',
-      'Source of Fibre and Potassium',
-    ],
-
     ingredients: [
       'banana',
       'cherry',
@@ -232,12 +189,7 @@ const productsData = [
       'acerola',
       'siberian ginseng',
     ],
-    category: 'smoothies',
-    directions: [
-      'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
-      'Add your fruit and veg pouch and superfood sachet and blend',
-      'Enjoy your freshly made superfood smoothie',
-    ],
+
     thumbnail: boostSmoothie1,
     images: [boostSmoothie1, boostSmoothie2, boostSmoothie3],
   },
@@ -245,15 +197,11 @@ const productsData = [
   {
     id: 'smoothie6n',
     name: 'NOURISH SMOOTHIE KIT',
+    category: 'smoothies',
+
     price: 2,
     description:
       'A delicious blend of frozen fruit, vegetables, prebiotic fibre and specially selected superfoods designed to aid positive gut health.',
-    benefits: [
-      'High Fibre: 7g of chicory inulin per serving (58% of RDI*)',
-      'Vitamin C, Vitamin B-6 & Copper to support normal function of the immune system',
-      'Source of Iron',
-    ],
-
     ingredients: [
       'banana',
       'avocado',
@@ -266,29 +214,22 @@ const productsData = [
       'flax seed',
       'baobab',
     ],
-    category: 'smoothies',
-    directions: [
-      'Add 200ml of water, coconut water, fruit juice or plant milk to your blender',
-      'Add your fruit and veg pouch and superfood sachet and blend',
-      'Enjoy your freshly made superfood smoothie',
-    ],
+
     thumbnail: nourishSmoothie1,
     images: [nourishSmoothie1, nourishSmoothie2, nourishSmoothie3],
   },
 
-  // fruit
   {
     id: 'fruit2c',
     name: 'ORGANIC CHERRIES',
+    category: 'fruit',
+
     price: 4.4,
     description:
-      'Sweet organic frozen Cherries certified by the UK soil association. \n We have carefully sourced the best quality Cherries.  We freeze once perfectly ripe to lock in flavour. Pitted and ready to use.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+      'Sweet organic frozen Cherries certified by the UK soil association. \n We have carefully sourced the best quality Cherries. We freeze once perfectly ripe to lock in flavour. Pitted and ready to use.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
 
-    ingredients: [{ name: 'Organic Cherries', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
+    ingredients: ['Organic Cherries'],
+
     thumbnail: cherryFruit1,
     images: [cherryFruit1, cherryFruit2, cherryFruit3],
   },
@@ -296,15 +237,13 @@ const productsData = [
   {
     id: 'fruit3s',
     name: 'ORGANIC STRAWBERRIES',
+    category: 'fruit',
+
     price: 4.4,
     description:
-      'Sweet organic frozen strawberries certified by the UK soil association. \n  We have carefully sourced the best quality strawberries.  We freeze once perfectly ripe to lock in flavour.  Diced and ready to use. \n Perfect for healthy smoothies, breakfast, baking and healthy snacks.',
+      'Sweet organic frozen strawberries certified by the UK soil association. \n We have carefully sourced the best quality strawberries. We freeze once perfectly ripe to lock in flavour. Diced and ready to use.\n Perfect for healthy smoothies, breakfast, baking and healthy snacks.',
+    ingredients: ['Organic Strawberries'],
 
-    ingredients: [{ name: 'Organic Strawberries', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: strawberryFruit1,
     images: [strawberryFruit1, strawberryFruit2, strawberryFruit3],
   },
@@ -312,15 +251,13 @@ const productsData = [
   {
     id: 'fruit1r',
     name: 'ORGANIC RASPBERRIES',
+    category: 'fruit',
+
     price: 5.3,
     description:
-      'Hand-picked whole organic frozen raspberries certified by the UK soil association. \n We have carefully sourced the best quality raspberries.  We freeze once perfectly ripe to lock in flavour.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks',
+      'Hand-picked whole organic frozen raspberries certified by the UK soil association. \n We have carefully sourced the best quality raspberries. We freeze once perfectly ripe to lock in flavour.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks',
+    ingredients: ['Organic Raspberries'],
 
-    ingredients: [{ name: 'Organic Raspberries', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: raspberryFruit1,
     images: [
       raspberryFruit1,
@@ -333,15 +270,13 @@ const productsData = [
   {
     id: 'fruit4b',
     name: 'ORGANIC BLUEBERRIES',
+    category: 'fruit',
+
     price: 4.4,
     description:
-      'Hand-picked organic frozen Blueberries certified by the UK soil association. \n We have carefully sourced the best quality Blueberries.  We freeze once perfectly ripe to lock in flavour.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+      'Hand-picked organic frozen Blueberries certified by the UK soil association. \n We have carefully sourced the best quality Blueberries. We freeze once perfectly ripe to lock in flavour.\n Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+    ingredients: ['Organic Blueberries'],
 
-    ingredients: [{ name: 'Organic Blueberries', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: blueberryFruit1,
     images: [blueberryFruit1, blueberryFruit2, blueberryFruit3],
   },
@@ -349,15 +284,13 @@ const productsData = [
   {
     id: 'fruit5p',
     name: 'ORGANIC PEACHES',
+    category: 'fruit',
+
     price: 4.3,
     description:
-      'Sweet organic frozen chopped mangoes certified by the UK soil association.\n  We have carefully sourced the best quality mangoes.  We freeze once perfectly ripe.  Chopped and ready to use. \n  Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+      'Sweet organic frozen chopped mangoes certified by the UK soil association.\n We have carefully sourced the best quality mangoes. We freeze once perfectly ripe. Chopped and ready to use. \n  Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+    ingredients: ['Organic Mango'],
 
-    ingredients: [{ name: 'Organic Mango', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: peachFruit1,
     images: [peachFruit1, peachFruit2, peachFruit3, peachFruit4],
   },
@@ -365,15 +298,13 @@ const productsData = [
   {
     id: 'fruit6a',
     name: 'AVOCADO',
+    category: 'fruit',
+
     price: 3.3,
     description:
-      'We have carefully sourced the best quality Hass Avocado. Chopped and ready to use.\n Superfood high in vitamins and minerals.  Perfect for healthy smoothies and dips. ',
+      'We have carefully sourced the best quality Hass Avocado. Chopped and ready to use.\n Superfood high in vitamins and minerals. Perfect for healthy smoothies and dips.',
+    ingredients: ['Avocado'],
 
-    ingredients: [{ name: 'Avocado', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: avocadoFruit1,
     images: [avocadoFruit1, avocadoFruit2],
   },
@@ -381,15 +312,13 @@ const productsData = [
   {
     id: 'fruit7m',
     name: 'ORGANIC MANGOES',
+    category: 'fruit',
+
     price: 4.3,
     description:
-      'Sweet organic frozen chopped mangoes certified by the UK soil association.\n  We have carefully sourced the best quality mangoes.  We freeze once perfectly ripe.  Chopped and ready to use. \n  Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+      'Sweet organic frozen chopped mangoes certified by the UK soil association.\n  We have carefully sourced the best quality mangoes. We freeze once perfectly ripe. Chopped and ready to use. \n  Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+    ingredients: ['Organic Mango'],
 
-    ingredients: [{ name: 'Organic Mango', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: mangoFruit1,
     images: [mangoFruit1, mangoFruit2, mangoFruit3, mangoFruit4],
   },
@@ -397,19 +326,17 @@ const productsData = [
   {
     id: 'fruit8sb',
     name: 'ORGANIC SUMMER BERRIES',
+    category: 'fruit',
+
     price: 4.4,
     description:
       'Handpicked and frozen on the day of harvest to capture all that goodness, our organic frozen fruit is a simple and sustainable way to add a little taste of sunshine to your day. We take time to carefully select and prepare the best, tastiest varieties so you can enjoy at home with no faff and zero waste. \n Perfect for blending, baking, breakfast and more. \n All our Organic Frozen Fruit offer the ultimate in convenience and nutrition. \n We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-
     ingredients: [
-      { name: 'Organic Berries', amount: 36 },
-      { name: 'Organic Blackberries', amount: 30 },
-      { name: 'Organic Blueberries', amount: 34 },
+      'Organic Berries',
+      'Organic Blackberries',
+      'Organic Blueberries',
     ],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
+
     thumbnail: berryFruit1,
     images: [berryFruit1, berryFruit2, berryFruit3],
   },
@@ -417,19 +344,13 @@ const productsData = [
   {
     id: 'fruit9of',
     name: 'ORGANIC ORCHARD FRUITS',
+    category: 'fruit',
+
     price: 4.3,
     description:
       'Handpicked and frozen on the day of harvest to capture all that goodness, our organic frozen fruit is a simple and sustainable way to add a little taste of sunshine to your day. We take time to carefully select and prepare the best, tastiest varieties so you can enjoy at home with no faff and zero waste. \n Perfect for blending, baking, breakfast and more. \n All our Organic Frozen Fruit offer the ultimate in convenience and nutrition. \n We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: ['Organic Apple', 'Organic Peach', 'Organic Pear'],
 
-    ingredients: [
-      { name: 'Organic Apple', amount: 36 },
-      { name: 'Organic Peach', amount: 34 },
-      { name: 'Organic Pear', amount: 30 },
-    ],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: orchardFruit1,
     images: [orchardFruit1, orchardFruit2, orchardFruit3],
   },
@@ -437,19 +358,13 @@ const productsData = [
   {
     id: 'fruit10tf',
     name: 'ORGANIC TROPICAL FRUITS',
+    category: 'fruit',
+
     price: 4.3,
     description:
       'Handpicked and frozen on the day of harvest to capture all that goodness, our organic frozen fruit is a simple and sustainable way to add a little taste of sunshine to your day. We take time to carefully select and prepare the best, tastiest varieties so you can enjoy at home with no faff and zero waste. \n Perfect for blending, baking, breakfast and more. \n All our Organic Frozen Fruit offer the ultimate in convenience and nutrition. \n We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: ['Organic Pineapple', 'Organic Mango', 'Organic Passionfruit'],
 
-    ingredients: [
-      { name: 'Organic Pineapple', amount: 39 },
-      { name: 'Organic Mango', amount: 39 },
-      { name: 'Organic Passionfruit', amount: 22 },
-    ],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
     thumbnail: tropicalFruit1,
     images: [tropicalFruit1, tropicalFruit2, tropicalFruit3],
   },
@@ -457,14 +372,13 @@ const productsData = [
   {
     id: 'fruit11b',
     name: 'BANANAS',
+    category: 'fruit',
+
     price: 2.5,
     description:
-      'We have carefully sourced the best quality Bananas.  We freeze once perfectly ripe to lock in flavour. Sliced and ready to use. Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
-    ingredients: [{ name: 'Bananas', amount: 100 }],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
+      'We have carefully sourced the best quality Bananas. We freeze once perfectly ripe to lock in flavour. Sliced and ready to use. Perfect for home-made smoothies, breakfast, baking and healthy snacks.',
+    ingredients: ['Bananas'],
+
     thumbnail: bananaFruit1,
     images: [bananaFruit1, bananaFruit2, bananaFruit3],
   },
@@ -472,90 +386,83 @@ const productsData = [
   {
     id: 'fruit12tf',
     name: 'ORGANIC TROPICAL FRUIT',
+    category: 'fruit',
+
     price: 4.3,
     description:
       'Handpicked and frozen on the day of harvest to capture all that goodness, our organic frozen fruit is a simple and sustainable way to add a little taste of sunshine to your day. We take time to carefully select and prepare the best, tastiest varieties so you can enjoy at home with no faff and zero waste. Perfect for Blending, Baking, Breakfast and More. \n All our Organic Frozen Fruit offer the ultimate in convenience and nutrition. \n We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-    ingredients: [
-      { name: 'Pineapple', amount: 39 },
-      { name: 'Passionfruit', amount: 22 },
-      { name: 'Mango', amount: 39 },
-    ],
-    category: 'fruit',
-    directions: [
-      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
-    ],
+    ingredients: ['Pineapple', 'Passionfruit', 'Mango'],
+
     thumbnail: tropicalFruit1,
     images: [tropicalFruit1, tropicalFruit2, tropicalFruit3],
   },
 
-  // vegetables
   {
     id: 'veggie1s',
     name: 'ORGANIC SPINACH',
+    category: 'vegetables',
+
     price: 3.3,
     description:
       'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day. \n We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient, for sautéing or adding to your favourite stir-fry. \n All our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-    ingredients: [{ name: 'Spinach', amount: 100 }],
-    category: 'vegetables',
-    directions: [
-      'Blend from frozen. \n Boil from frozen: Place in a saucepan of boiling water. Simmer for 1-2 minutes. Drain and serve.\n Sauté from frozen: Place in pan or wok and sauté for 4 mins on a high heat. Ensure food is cooked until piping hot. \n Season to taste.',
-    ],
+    ingredients: ['Spinach'],
+
     thumbnail: spinachVeg1,
     images: [spinachVeg1, spinachVeg2, spinachVeg3],
   },
+
   {
     id: 'veggie2p',
     name: 'ORGANIC SWEET POTATO',
+    category: 'vegetables',
+
     price: 3.3,
     description:
       'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-    ingredients: [{ name: 'Sweet Potatoe', amount: 100 }],
-    category: 'vegetables',
-    directions: [
-      'Blend from frozen. \n Oven cook from Frozen: 220°C/ Fan 200°C/Gas 7 16-20 mins. Place on a lightly oiled baking tray in the centre of a pre-heated oven for 16-20 minutes. Turn halfway through cooking. Ensure food is cooked until piping hot.\n Season to taste.',
-    ],
+    ingredients: ['Sweet Potatoe'],
+
     thumbnail: potatoeVeg1,
     images: [potatoeVeg1, potatoeVeg2, potatoeVeg3],
   },
+
   {
     id: 'veggie3pp',
     name: 'ORGANIC PETIT POIS',
+    category: 'vegetables',
+
     price: 3.3,
     description:
       'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-    ingredients: [{ name: 'Petit pois', amount: 100 }],
-    category: 'vegetables',
-    directions: [
-      'Boil from frozen: Place in a saucepan of boiling water. Simmer for 2 minutes. Drain and serve. Ensure food is cooked until piping hot.\n Season to taste.',
-    ],
+    ingredients: ['Petit pois'],
+
     thumbnail: poisVeg1,
     images: [poisVeg1, poisVeg2, poisVeg3],
   },
+
   {
     id: 'veggie4cr',
     name: 'ORGANIC CAULIFLOWER RICE',
+    category: 'vegetables',
+
     price: 3.3,
     description:
       'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-    ingredients: [{ name: 'Cauliflower', amount: 100 }],
-    category: 'vegetables',
-    directions: [
-      'Blend from frozen.\n Sauté from frozen: Place in pan or wok and sauté for 4 mins on a high heat. Ensure food is cooked until piping hot.\nSeason to taste.',
-    ],
+    ingredients: ['Cauliflower'],
+
     thumbnail: cauliflowerVeg1,
     images: [cauliflowerVeg1, cauliflowerVeg2, cauliflowerVeg3],
   },
+
   {
     id: 'veggie5sc',
     name: 'ORGANIC SWEETCORN',
+    category: 'vegetables',
+
     price: 3.3,
     description:
       'Picked and frozen on the day of harvest to capture all that goodness, our organic frozen vegetables are a sustainable way to add a little taste of sunshine to your day \n  We take time to carefully select and prepare the best and tastiest varieties so you can enjoy at home with no faff and zero waste. Great as a smoothie ingredient or for simply roasting. \nAll our Organic Frozen Veg offer the ultimate in convenience and nutrition. We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
-    ingredients: [{ name: 'Corn', amount: 100 }],
-    category: 'vegetables',
-    directions: [
-      'Boil from frozen: Place in a saucepan of boiling water. Simmer for 2 minutes. Drain and serve. Ensure food is cooked until piping hot.\nSeason to taste.',
-    ],
+    ingredients: ['Corn'],
+
     thumbnail: cornVeg1,
     images: [cornVeg1, cornVeg2, cornVeg3],
   },

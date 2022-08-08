@@ -7,7 +7,9 @@ import ProductDetail from './pages/ProductDetail';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 
+import ScrollToTop from './helpers/ScrollToTop';
 import Layout from './components/Layout';
+
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from './store/cartSlice';
 
@@ -21,14 +23,16 @@ function App() {
 
   return (
     <Layout>
-      <Routes>
-        <Route path="/" element={<Navigate replace to="/home" />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
-        <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route path="/" element={<Navigate replace to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetail />} />
+          <Route path="/about" element={<About />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ScrollToTop>
     </Layout>
   );
 }

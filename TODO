@@ -6,3 +6,43 @@
 ☐ normal real fonts
 ☐ loading and error
 ☐ not found page
+☐ recommended products randomly 
+☐ dragging slider for each product
+
+
+
+
+
+☐ usememo
+☐ useeffectlayout
+☐ context
+☐ spotify
+☐ dashboard
+☐ weather
+☐ redux
+
+
+☐ nextjs
+☐ test
+☐ typescript
+
+
+
+
+☐ Header
+  ✔ HamburgeMenu @done(22-08-08 20:33)
+  ✔ Navbar @done(22-08-08 20:34)
+  ✔ CartModal @done(22-08-09 02:44)
+  ☐ CartSlice
+
+  ✔ Hero @done(22-08-09 00:01)
+  ✔ Testimonials @done(22-08-09 01:23)
+  ✔ Brands @done(22-08-09 00:13)
+  ✔ Signup @done(22-08-09 01:58)
+  ✔ Footer @done(22-08-09 02:09)
+  ✔ Go to top on each link click @done(22-08-09 02:18)
+  ✔ CartModal animation @done(22-08-09 02:44)
+  ☐ About page
+  ☐ Loading spinner
+  ☐ Responsive
+  ☐ Form component

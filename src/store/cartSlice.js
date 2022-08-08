@@ -12,6 +12,7 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       const qtt = action.payload.quantity ? action.payload.quantity : 1;
+      console.log(qtt);
       if (
         state.items.filter(item => item.id === action.payload.id).length === 0
       ) {
@@ -27,6 +28,7 @@ const cartSlice = createSlice({
       }
       state.totalPrice = state.totalPrice + action.payload.price * qtt;
       state.totalQuantity = state.totalQuantity + qtt;
+      console.log(state.totalQuantity);
 
       localStorage.setItem('cartItems', JSON.stringify(state.items));
     },
@@ -44,10 +46,22 @@ const cartSlice = createSlice({
       }
       state.totalQuantity--;
       state.totalPrice = state.totalPrice - currItem.price;
+      localStorage.setItem('cartItems', JSON.stringify(state.items));
     },
     setCart(state, action) {
-      state.items = [...action.payload];
-      state.totalQuantity = action.payload.length;
+      if (!action.payload) {
+        state.items = [];
+      } else {
+        state.items = [...action.payload];
+        state.totalQuantity = state.items.reduce(
+          (total, item) => (total = total + item.quantity),
+          0
+        );
+        state.totalPrice = state.items.reduce(
+          (total, item) => (total = total + item.price * item.quantity),
+          0
+        );
+      }
     },
   },
 });

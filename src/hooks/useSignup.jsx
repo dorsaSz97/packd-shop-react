@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-const URL = 'https://react-http-exerc-default-rtdb.frebaseio.com/';
+const URL = 'https://react-http-exerc-default-rtdb.firebaseio.com/';
+
 const useSignup = () => {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [receivedData, setReceivedData] = useState(null);
 
   const sendData = email => {
     // send the value to the firebase
@@ -18,12 +20,13 @@ const useSignup = () => {
         if (res.ok) {
           console.log('done');
           setIsLoading(false);
+          return res.json();
         } else {
           setIsError(true);
         }
       })
+      .then(data => setReceivedData(data))
       .catch(err => setIsError(true));
-    // .then(data => console.log(data));
   };
 
   return {
@@ -32,17 +35,8 @@ const useSignup = () => {
     setIsLoading,
     sendData,
     setIsError,
+    receivedData,
   };
 };
 
 export default useSignup;
-
-// SET_COUNT for sconst numbers
-// indexjs to every component
-// go to top uselocation
-// random recomended
-// when id changes change url and thennnnnn change the product in useeffect
-// folder data helpers structure
-// with context and redux
-// with axios and fetch
-// with framer motion and normal css
