@@ -322,7 +322,12 @@ const productsData = [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
     thumbnail: raspberryFruit1,
-    images: [raspberryFruit1, raspberryFruit2, raspberryFruit3],
+    images: [
+      raspberryFruit1,
+      raspberryFruit2,
+      raspberryFruit3,
+      raspberryFruit4,
+    ],
   },
 
   {
@@ -354,7 +359,7 @@ const productsData = [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
     thumbnail: peachFruit1,
-    images: [peachFruit1, peachFruit2, peachFruit3],
+    images: [peachFruit1, peachFruit2, peachFruit3, peachFruit4],
   },
 
   {
@@ -386,7 +391,7 @@ const productsData = [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
     thumbnail: mangoFruit1,
-    images: [mangoFruit1, mangoFruit2, mangoFruit3],
+    images: [mangoFruit1, mangoFruit2, mangoFruit3, mangoFruit4],
   },
 
   {
@@ -445,8 +450,8 @@ const productsData = [
     directions: [
       'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
     ],
-    thumbnail: '',
-    images: [],
+    thumbnail: tropicalFruit1,
+    images: [tropicalFruit1, tropicalFruit2, tropicalFruit3],
   },
 
   {
@@ -462,6 +467,25 @@ const productsData = [
     ],
     thumbnail: bananaFruit1,
     images: [bananaFruit1, bananaFruit2, bananaFruit3],
+  },
+
+  {
+    id: 'fruit12tf',
+    name: 'ORGANIC TROPICAL FRUIT',
+    price: 4.3,
+    description:
+      'Handpicked and frozen on the day of harvest to capture all that goodness, our organic frozen fruit is a simple and sustainable way to add a little taste of sunshine to your day. We take time to carefully select and prepare the best, tastiest varieties so you can enjoy at home with no faff and zero waste. Perfect for Blending, Baking, Breakfast and More. \n All our Organic Frozen Fruit offer the ultimate in convenience and nutrition. \n We only use the highest quality ingredients, freshly frozen for maximum nutritional value.',
+    ingredients: [
+      { name: 'Pineapple', amount: 39 },
+      { name: 'Passionfruit', amount: 22 },
+      { name: 'Mango', amount: 39 },
+    ],
+    category: 'fruit',
+    directions: [
+      'Perfect for blending, baking, snacking, sauces, curries, salads and adding to yogurt, cereal and desserts - simply defrost for 30 minutes. For Smoothies blend from frozen.',
+    ],
+    thumbnail: tropicalFruit1,
+    images: [tropicalFruit1, tropicalFruit2, tropicalFruit3],
   },
 
   // vegetables
@@ -491,7 +515,7 @@ const productsData = [
       'Blend from frozen. \n Oven cook from Frozen: 220°C/ Fan 200°C/Gas 7 16-20 mins. Place on a lightly oiled baking tray in the centre of a pre-heated oven for 16-20 minutes. Turn halfway through cooking. Ensure food is cooked until piping hot.\n Season to taste.',
     ],
     thumbnail: potatoeVeg1,
-    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+    images: [potatoeVeg1, potatoeVeg2, potatoeVeg3],
   },
   {
     id: 'veggie3pp',
@@ -504,8 +528,8 @@ const productsData = [
     directions: [
       'Boil from frozen: Place in a saucepan of boiling water. Simmer for 2 minutes. Drain and serve. Ensure food is cooked until piping hot.\n Season to taste.',
     ],
-    thumbnail: potatoeVeg1,
-    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+    thumbnail: poisVeg1,
+    images: [poisVeg1, poisVeg2, poisVeg3],
   },
   {
     id: 'veggie4cr',
@@ -518,8 +542,8 @@ const productsData = [
     directions: [
       'Blend from frozen.\n Sauté from frozen: Place in pan or wok and sauté for 4 mins on a high heat. Ensure food is cooked until piping hot.\nSeason to taste.',
     ],
-    thumbnail: potatoeVeg1,
-    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+    thumbnail: cauliflowerVeg1,
+    images: [cauliflowerVeg1, cauliflowerVeg2, cauliflowerVeg3],
   },
   {
     id: 'veggie5sc',
@@ -532,8 +556,8 @@ const productsData = [
     directions: [
       'Boil from frozen: Place in a saucepan of boiling water. Simmer for 2 minutes. Drain and serve. Ensure food is cooked until piping hot.\nSeason to taste.',
     ],
-    thumbnail: potatoeVeg1,
-    images: [poisVeg1, potatoeVeg2, potatoeVeg3],
+    thumbnail: cornVeg1,
+    images: [cornVeg1, cornVeg2, cornVeg3],
   },
 ];
 
