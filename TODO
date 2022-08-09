@@ -42,7 +42,12 @@
   ✔ Footer @done(22-08-09 02:09)
   ✔ Go to top on each link click @done(22-08-09 02:18)
   ✔ CartModal animation @done(22-08-09 02:44)
-  ☐ About page
+  ✔ About page @done(22-08-09 13:40)
   ☐ Loading spinner
   ☐ Responsive
-  ☐ Form component
+  ✔ Form component @done(22-08-09 15:46)
+  
+  ✔ Product detail page @done(22-08-09 16:01)
+    ✔ responsive @done(22-08-09 16:01)
+    ✔ go back button @done(22-08-09 15:46)
+    ✔ image slider @done(22-08-09 15:13)

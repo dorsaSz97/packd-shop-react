@@ -91,6 +91,7 @@ const Products = () => {
 
   const changeFilterHandler = e => {
     let filterValue = e.target.value;
+    goToPage(1);
 
     dispatch(
       productsActions.refineData({
@@ -141,9 +142,11 @@ const Products = () => {
       </div>
 
       {/* products */}
-      {displayedData.map(product => {
-        return <ProductCard key={Math.random() * 1000} product={product} />;
-      })}
+      <div className="flex flex-wrap ">
+        {displayedData.map(product => {
+          return <ProductCard key={Math.random() * 1000} product={product} />;
+        })}
+      </div>
 
       {/* pagination */}
       <div>

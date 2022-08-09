@@ -17,8 +17,8 @@ const productsSlice = createSlice({
   reducers: {
     setCurrProduct(state, action) {
       const category = action.payload || '';
-      const [currProductObj] = PRODUCTS_BANNER.filter(
-        product => product.category.toLowerCase() === category.toLowerCase()
+      const [currProductObj] = PRODUCTS_BANNER.filter(product =>
+        product.category.toLowerCase().includes(category.toLowerCase())
       );
 
       state.currProduct = { ...currProductObj };

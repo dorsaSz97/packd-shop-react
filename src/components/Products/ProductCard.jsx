@@ -10,12 +10,12 @@ const ProductCard = ({ product }) => {
     dispatch(cartActions.addItem({ ...product }));
   };
   return (
-    <article className="p-5">
+    <article className="p-5 basis-[100%] md:basis-[50%] lg:basis-[33%]">
       <Link to={`/products/${product.id}`}>
-        <figure>
+        <figure className="flex items-center justify-center">
           <img
             src={product.thumbnail}
-            className="mix-blend-darken"
+            className="mix-blend-darken w-[400px] object-contain"
             alt={product.name}
           />
         </figure>

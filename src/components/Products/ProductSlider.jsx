@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
 
-const ProductSlider = ({ images }) => {
-  console.log(images);
-  const [currImage, setCurrImage] = useState(images[0]);
+const ProductSlider = ({ images, productName }) => {
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
 
-  const imageClickHandler = index => {
-    setCurrImage(images[index]);
+  const imageClickHandler = activeIndex => {
+    setActiveImageIndex(activeIndex);
   };
 
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex flex-col items-center gap-6 lg:flex-row md:w-[50%]">
       <figure>
-        <img src={currImage} alt="" className="mix-blend-darken" />
+        <img
+          className="mix-blend-darken"
+          src={images[activeImageIndex]}
+          alt={productName}
+        />
       </figure>
-      <div className="flex flex-col gap-7">
+      <div className="flex gap-3 lg:flex-col lg:order-first">
         {images.map((image, index) => {
           return (
             <img
-              key={Math.random() * 1000}
-              className="w-[100px] mix-blend-darken"
+              key={index}
+              className={`w-[100px] object-contain mix-blend-darken ${
+                index === activeImageIndex ? 'border-2 border-dark' : ''
+              }`}
               src={image}
-              alt=""
+              alt={productName}
               onClick={() => imageClickHandler(index)}
             />
           );
@@ -30,4 +35,4 @@ const ProductSlider = ({ images }) => {
   );
 };
 
-export default React.memo(ProductSlider);
+export default ProductSlider;

@@ -35,7 +35,7 @@ const PRODUCTS_BANNER = [
     ],
   },
   {
-    category: 'Organic Vetegables',
+    category: 'Organic Vegetables',
     bannerImg: vegetablesBannerImg,
     desc: 'Picked and Frozen on the day of harvest to capture all that goodness, our frozen organic vegetables are a sustainable way to add a little taste of sunshine to your day.',
     features: [

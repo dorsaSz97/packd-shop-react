@@ -1,33 +1,35 @@
-import React, { Fragment, useCallback, useState, useRef } from 'react';
-import { useParams } from 'react-router-dom';
-
-import productsData from '../data/productsData';
-import ProductSlider from '../components/Products/ProductSlider';
+import React from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 
 import Product from '../components/Product';
-// const quantityInputRef = useRef();
+import NotFound from './NotFound';
+
+import productsData from '../data/productsData';
 
 const ProductDetail = () => {
-  const { id } = useParams(); //smoothie4e
+  const navigate = useNavigate();
+  const { id } = useParams(); // ex. smoothie4e
   const currProductIndex = productsData.findIndex(product => product.id === id);
   const currProduct = productsData[currProductIndex];
 
-  console.log(currProduct);
-  if (!currProduct) return <p>No Product Found</p>; //TODO:create component maybe
+  const goBack = () => {
+    navigate(-1);
+  };
+
+  // the manually entered url is wrong / no product with that id is found
+  if (!currProduct) {
+    return <NotFound goBack={goBack} />;
+  }
 
   return (
-    <Fragment>
-      {/* product */}
-      <Product product={currProduct} />
+    <section className="py-10 px-4 font-radial">
+      <button className="text-[1.1rem]" onClick={goBack}>
+        &lt; Back
+      </button>
 
-      {/* instructions/info */}
-      {/* reecommended */}
-    </Fragment>
+      <Product product={currProduct} />
+    </section>
   );
 };
 
 export default ProductDetail;
-// sort (mese max)
-// filter (mese dana)
-// lib api mese max
-//  random products

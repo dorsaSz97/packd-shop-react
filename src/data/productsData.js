@@ -14,8 +14,7 @@ import replenishSmoothie1 from '../assets/products/smoothies/replenish1.webp';
 import replenishSmoothie2 from '../assets/products/smoothies/replenish2.webp';
 import replenishSmoothie3 from '../assets/products/smoothies/replenish3.webp';
 import vitalitySmoothie1 from '../assets/products/smoothies/vitality1.webp';
-import vitalitySmoothie2 from '../assets/products/smoothies/vitality2.webp';
-import vitalitySmoothie3 from '../assets/products/smoothies/vitality3.webp';
+import vitalitySmoothie2 from '../assets/products/smoothies/vitality3.webp';
 
 import avocadoFruit1 from '../assets/products/fruit/avocado1.webp';
 import avocadoFruit2 from '../assets/products/fruit/avocado2.webp';
@@ -116,7 +115,7 @@ const productsData = [
     ],
 
     thumbnail: vitalitySmoothie1,
-    images: [vitalitySmoothie1, vitalitySmoothie2, vitalitySmoothie3],
+    images: [vitalitySmoothie1, vitalitySmoothie2],
   },
 
   {
