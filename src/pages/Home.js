@@ -25,8 +25,8 @@ const Home = () => {
           return (
             <ProductCTA
               addedClasses={{
-                section: 'flex',
-                image: `${index % 2 ? 'order-2' : ''}`,
+                section: ' flex flex-col lg:flex lg:flex-row lg:px-40',
+                image: `${index % 2 ? 'lg:order-2' : ''}`,
               }}
               key={cta.path}
               btnText={cta.btnText}

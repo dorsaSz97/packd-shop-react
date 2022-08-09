@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { IconContext } from 'react-icons';
 import { FiMenu } from 'react-icons/fi';
@@ -20,12 +20,18 @@ const Navbar = () => {
         <h1 className="font-radial text-3xl font-bold">PACK'D</h1>
       </Link>
 
-      <ul className="hidden">
+      <ul className="hidden font-pp text-[1.3rem] md:flex md:gap-10">
         {HEADER_LINKS.map((link, index) => {
           return (
-            <Link key={index} to={link.path}>
+            <NavLink
+              className={navData =>
+                navData.isActive ? 'border-b-2 border-dark' : ''
+              }
+              key={index}
+              to={link.path}
+            >
               {link.name}
-            </Link>
+            </NavLink>
           );
         })}
       </ul>
