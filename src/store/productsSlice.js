@@ -17,11 +17,12 @@ const productsSlice = createSlice({
   reducers: {
     setCurrProduct(state, action) {
       const category = action.payload || '';
-      const [currProductObj] = PRODUCTS_BANNER.filter(product =>
+      const currProductObj = PRODUCTS_BANNER.filter(product =>
         product.category.toLowerCase().includes(category.toLowerCase())
       );
-
-      state.currProduct = { ...currProductObj };
+      currProductObj.length === 0
+        ? (state.currProduct = '')
+        : (state.currProduct = { ...currProductObj[0] });
     },
     setProducts(state, action) {
       state.products = [...action.payload];

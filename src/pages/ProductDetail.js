@@ -18,7 +18,7 @@ const ProductDetail = () => {
 
   // the manually entered url is wrong / no product with that id is found
   if (!currProduct) {
-    return <NotFound goBack={goBack} />;
+    return <NotFound />;
   }
 
   return (

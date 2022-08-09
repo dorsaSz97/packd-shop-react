@@ -4,16 +4,17 @@ import { useSelector } from 'react-redux';
 import MainBannerHeader from './MainBannerHeader';
 
 const MainBanner = () => {
-  const currProduct = useSelector(state => state.products.currProduct);
-
-  if (!currProduct) return; //TODO:LOADER SPINNER
+  const currCategory = useSelector(state => state.products.currProduct);
 
   return (
     <section
-      className="py-[8rem] bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${currProduct.bannerImg})` }}
+      style={{ backgroundImage: `url(${currCategory.bannerImg})` }}
+      className="py-[7rem] bg-cover bg-center bg-no-repeat"
     >
-      <MainBannerHeader text={currProduct.desc} title={currProduct.category} />
+      <MainBannerHeader
+        title={currCategory.category}
+        text={currCategory.desc}
+      />
     </section>
   );
 };

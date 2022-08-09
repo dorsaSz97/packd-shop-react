@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import usePagination from '../hooks/usePagination';
@@ -12,21 +12,31 @@ import MainBanner from '../components/MainBanner/MainBanner';
 import { useDispatch, useSelector } from 'react-redux';
 import { productsActions } from '../store/productsSlice';
 import SelectionBox from '../components/SelectionBox/SelectionBox';
+import NotFound from './NotFound';
 
 const Products = () => {
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
-
   const { search } = useLocation();
   const queryParams = new URLSearchParams(search);
   const filterParam = queryParams.get('filter');
   const sortParam = queryParams.get('sort');
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
+
+  const currCategory = useSelector(state => state.products.currProduct);
   const refinedProducts = useSelector(state => state.products.refinedProducts);
 
+  const { currentPage, totalPages, displayedData, goToPage } = usePagination([
+    ...refinedProducts,
+  ]);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
   useEffect(() => {
-    console.log(filterParam);
     if (filterParam) {
       dispatch(
         productsActions.setProducts(
@@ -46,22 +56,31 @@ const Products = () => {
       })
     );
     dispatch(productsActions.setCurrProduct(filterParam));
-  }, [filterParam, dispatch, sortParam]);
+  }, [filterParam, sortParam, dispatch]);
 
-  const { currentPage, goToPage, totalPages, displayedData } = usePagination([
-    ...refinedProducts,
-  ]);
+  useEffect(() => {
+    if (currCategory === '') {
+      setIsError(true);
+      setIsLoading(false);
+    } else if (currCategory === null) {
+      setIsLoading(true);
+      setIsError(false);
+    } else {
+      setIsError(false);
+      setIsLoading(false);
+    }
+  }, [currCategory]);
 
   let pagination = [];
   for (let i = 0; i < totalPages; i++) {
     pagination.push(
       <span
+        key={i}
         className={`p-3 py-1 ${
           currentPage === i + 1
-            ? 'bg-black text-white'
-            : 'text-black cursor-pointer'
+            ? 'bg-dark text-white'
+            : 'bg-transparent text-dark cursor-pointer'
         }`}
-        key={i}
         onClick={() => changePageHandler(i + 1)}
       >
         {i + 1}
@@ -91,6 +110,7 @@ const Products = () => {
 
   const changeFilterHandler = e => {
     let filterValue = e.target.value;
+
     goToPage(1);
 
     dispatch(
@@ -110,56 +130,59 @@ const Products = () => {
     }
   };
 
-  const changePageHandler = index => {
-    window.scrollTo(0, 0);
-    goToPage(index);
+  const changePageHandler = pageNumber => {
+    goToPage(pageNumber);
   };
 
   return (
-    <div>
-      {/* banner */}
-      <MainBanner />
-      {/* features */}
-      <FeaturesSlider />
+    <>
+      {!isLoading && !isError && (
+        <div>
+          <MainBanner currCategory={currCategory} />
 
-      {/* filter and sort options */}
-      <div className="flex justify-between items-center p-4">
-        <span className="uppercase text-sm">
-          {displayedData.length} products
-        </span>
-        <div className="flex flex-col items-end gap-2">
-          <SelectionBox
-            changeValueHandler={changeFilterHandler}
-            kind="filter"
-            selected={filterParam}
-          />
-          <SelectionBox
-            changeValueHandler={changeSortHandler}
-            kind="sort"
-            selected={sortParam}
-          />
+          <FeaturesSlider />
+
+          <div className="py-10 px-4 md:px-8 lg:px-12">
+            <div className="flex justify-between">
+              <span className="text-[1rem] uppercase font-bold">
+                {displayedData.length} products
+              </span>
+              <div className="flex flex-col items-end gap-2">
+                <SelectionBox
+                  kind="filter"
+                  selected={filterParam}
+                  changeValueHandler={changeFilterHandler}
+                />
+                <SelectionBox
+                  kind="sort"
+                  selected={sortParam}
+                  changeValueHandler={changeSortHandler}
+                />
+              </div>
+            </div>
+
+            <div className="flex flex-wrap mb-4">
+              {displayedData.map((product, index) => {
+                return <ProductCard key={index} product={product} />;
+              })}
+            </div>
+
+            <div>
+              <ul className="flex w-full items-center justify-center gap-6">
+                {pagination}
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* products */}
-      <div className="flex flex-wrap ">
-        {displayedData.map(product => {
-          return <ProductCard key={Math.random() * 1000} product={product} />;
-        })}
-      </div>
-
-      {/* pagination */}
-      <div>
-        <ul className="w-full p-4 flex items-center justify-center gap-6">
-          {pagination}
-        </ul>
-      </div>
-    </div>
+      )}
+      {!isLoading && isError && <NotFound />}
+      {isLoading && !isError && (
+        <div className="flex items-center justify-center w-[100%] min-h-[80vh]">
+          <p>Loading....</p>
+        </div>
+      )}
+    </>
   );
 };
 
 export default Products;
-
-// helpers normal func
-// custom hook functions with state
-// firebase for signup and cart instead of LS

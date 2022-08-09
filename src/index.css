@@ -48,10 +48,13 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  min-height: 100vh;
   font-family: 'Radial', sans-serif;
   background-color: #fef9ef;
   scroll-behavior: smooth;
+}
+
+main {
+  min-height: 80vh;
 }
 
 /* make form elements easier to work with */
