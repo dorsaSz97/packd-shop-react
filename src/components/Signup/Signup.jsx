@@ -42,19 +42,29 @@ const Signup = () => {
   }
 
   return (
-    <section className="p-10">
-      <form className="flex w-full" onSubmit={submitSignupHandler}>
+    <section className="p-10 lg:py-24">
+      <h3
+        className="font-pp text-[2.3rem] font-bold mb-10 text-center"
+        htmlFor="email"
+      >
+        Want to hear more?
+      </h3>
+      <form
+        className="flex  w-full max-w-[500px] mx-auto"
+        onSubmit={submitSignupHandler}
+      >
         <input
+          id="email"
           value={emailInput}
           type="text"
           required
           disabled={receivedData}
           placeholder={!receivedData ? 'Enter your e-mail' : ''}
           ref={emailInputRef}
-          className={`flex-1 px-5 k text-black focus:placeholder-opacity-50 ${
+          className={`flex-1 px-5 k text-dark focus:placeholder-opacity-50 ${
             receivedData
               ? 'border-2 border-green-300 '
-              : 'border-2 border-black placeholder-black '
+              : 'border-2 border-dark placeholder-dark '
           }`}
           onChange={e => {
             setEmailInput(e.target.value);
@@ -71,7 +81,7 @@ const Signup = () => {
           }}
         />
         <button
-          className={`flex-1/4 p-3 bg-black text-white  ${
+          className={`flex-1/4 p-3 bg-dark text-white  ${
             isError && 'bg-orange-500'
           } ${
             receivedData &&

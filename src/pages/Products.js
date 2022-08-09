@@ -1,18 +1,15 @@
 import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-
-import usePagination from '../hooks/usePagination';
-
-import ProductCard from '../components/Products/ProductCard';
-
-import productsData from '../data/productsData';
-import FeaturesSlider from '../components/FeaturesSlider/FeaturesSlider';
-import MainBanner from '../components/MainBanner/MainBanner';
-
 import { useDispatch, useSelector } from 'react-redux';
-import { productsActions } from '../store/productsSlice';
+
+import MainBanner from '../components/MainBanner/MainBanner';
+import FeaturesSlider from '../components/FeaturesSlider/FeaturesSlider';
 import SelectionBox from '../components/SelectionBox/SelectionBox';
+import ProductCard from '../components/Products/ProductCard';
 import NotFound from './NotFound';
+import productsData from '../data/productsData';
+import { productsActions } from '../store/productsSlice';
+import usePagination from '../hooks/usePagination';
 
 const Products = () => {
   const navigate = useNavigate();
