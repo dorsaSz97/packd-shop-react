@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { motion } from 'framer-motion';
 
-import { cartActions } from '../../store/cartSlice';
 import { uiActions } from '../../store/uiSlice';
 import { visibilityAnimation } from '../../animations/animations';
+import QuantityForm from '../QuantityForm/index';
 
 const CartModalContent = () => {
   const dispatch = useDispatch();
@@ -30,17 +30,23 @@ const CartModalContent = () => {
         animate="visible"
         exit="hidden"
         variants={visibilityAnimation}
-        className={`fixed flex items-center justify-center  p-10 w-screen h-screen z-[10000]`}
+        className={`fixed flex items-center justify-center p-3 md:p-6 w-screen h-screen z-[10000]`}
       >
-        <motion.div className="flex flex-col gap-10 p-6 w-[95%] h-[90vh] bg-primary font-radial text-dark">
+        <motion.div className="flex flex-col gap-10 p-6 w-[95%] md:w-[80%] lg:w-[50%] h-[90vh] bg-primary font-radial text-dark">
           <button
-            className="self-end font-light uppercase text-[1.1rem] tracking-wide cursor-pointer"
+            className="self-end uppercase text-[1rem] tracking-wide cursor-pointer"
             onClick={() => dispatch(uiActions.toggleModal())}
           >
             Close
           </button>
 
-          {isEmpty && <p>Your cart is empty :( </p>}
+          {isEmpty && (
+            <div className="flex items-center justify-center">
+              <p className="font-pp font-bold text-2xl tracking-wide">
+                Your cart is empty :({' '}
+              </p>
+            </div>
+          )}
           {!isEmpty && (
             <>
               <ul className="flex flex-col items-center gap-4 overflow-y-scroll ">
@@ -53,43 +59,15 @@ const CartModalContent = () => {
                       <img
                         src={item.thumbnail}
                         alt={item.name}
-                        className="mix-blend-darken w-[30%] aspect-square"
+                        className="mix-blend-darken w-[30%] aspect-square lg:w-[40%]"
                       />
-                      <div className="w-[55%]">
+                      <div className="w-[55%] md:w-[30%]">
                         <p className="mb-3">{item.name}</p>
-                        <form className="flex flex-col items-stretch justify-center">
-                          <div className="form-control relative">
-                            <button
-                              onClick={() =>
-                                dispatch(cartActions.removeItem(item.id))
-                              }
-                              type="button"
-                              className="absolute translate-y-[-50%] top-[50%] left-[5%] w-[30px] h-[30px] border-gray-500 border-2 opacity-50"
-                            >
-                              -
-                            </button>
-                            <input
-                              type="text"
-                              readOnly
-                              value={item.quantity}
-                              className="w-full p-6 text-center border-black border-[3px] pointer-events-none"
-                            />
-                            <button
-                              onClick={() =>
-                                dispatch(
-                                  cartActions.addItem({ ...item, quantity: 1 })
-                                )
-                              }
-                              type="button"
-                              className="absolute w-[30px] h-[30px] top-[50%] right-[5%] border-gray-500 border-2 opacity-50 translate-y-[-50%]"
-                            >
-                              +
-                            </button>
-                          </div>
-                        </form>
+                        <QuantityForm isCart={true} product={item} />
                       </div>
                       <span className="text-[1rem] font-bold">
-                        ${item.price.toFixed(2)}
+                        {/* {item.quantity} x ${item.price.toFixed(2)} */}$
+                        {item.price.toFixed(2)}
                       </span>
                     </li>
                   );

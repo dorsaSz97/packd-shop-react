@@ -6,13 +6,13 @@ import FOOTER_LINKS from '../../data/footerLinks';
 const Footer = () => {
   return (
     <footer className="flex flex-col justify-between gap-20 bg-dark text-white py-10 px-4">
-      <ul className="flex flex-col ">
+      <ul className="flex flex-col md:flex-row ">
         {FOOTER_LINKS.map(link => {
           return (
             <Link
               key={link.name}
               to="/home"
-              className="py-5 px-2 border-white border-opacity-40 border-b-[0.5px] text-[14px] uppercase"
+              className="py-5 px-2 border-white border-opacity-40 border-b-[0.5px] md:border-0 text-[14px] uppercase"
             >
               {link.name}
             </Link>

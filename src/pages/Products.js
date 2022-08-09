@@ -160,6 +160,7 @@ const Products = () => {
 
             <div className="flex flex-wrap mb-4">
               {displayedData.map((product, index) => {
+                console.log(product);
                 return <ProductCard key={index} product={product} />;
               })}
             </div>

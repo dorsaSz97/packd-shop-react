@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 import PRODUCTS_BANNER from '../data/productsBanner';
-import productsData from '../data/productsData';
+
 const initialProductsState = {
   products: [],
   totalProducts: 0,

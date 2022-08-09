@@ -12,7 +12,7 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       const qtt = action.payload.quantity ? action.payload.quantity : 1;
-      console.log(qtt);
+      console.log(action.payload);
       if (
         state.items.filter(item => item.id === action.payload.id).length === 0
       ) {

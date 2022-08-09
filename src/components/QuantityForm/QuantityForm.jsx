@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 
 import { cartActions } from '../../store/cartSlice';
 
-const QuantityForm = ({ product }) => {
+const QuantityForm = ({ product, isCart = false }) => {
   const dispatch = useDispatch();
-  const [qttValue, setQttValue] = useState(1);
+  const [qttValue, setQttValue] = useState(isCart ? product.quantity : 1);
   const qttInputRef = useRef();
 
   const addItemHandler = e => {
@@ -17,6 +17,7 @@ const QuantityForm = ({ product }) => {
         name: product.name,
         price: product.price,
         quantity: +qttInputRef.current.value,
+        thumbnail: product.thumbnail,
       })
     );
   };
@@ -26,10 +27,28 @@ const QuantityForm = ({ product }) => {
   };
 
   const incQtt = () => {
-    setQttValue(prev => prev + 1);
+    if (isCart) {
+      setQttValue(product.quantity + 1);
+      dispatch(
+        cartActions.addItem({
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          quantity: 1,
+          thumbnail: product.thumbnail,
+        })
+      );
+    } else {
+      setQttValue(prev => prev + 1);
+    }
   };
   const decQtt = () => {
-    setQttValue(prev => (prev === 1 ? 1 : prev - 1));
+    if (isCart) {
+      setQttValue(product.quantity - 1);
+      dispatch(cartActions.removeItem(product.id));
+    } else {
+      setQttValue(prev => prev - 1);
+    }
   };
 
   return (
@@ -51,7 +70,9 @@ const QuantityForm = ({ product }) => {
           id="quantity"
           ref={qttInputRef}
           value={qttValue}
-          className="p-6 w-full border-2 border-b-0 border-dark text-center"
+          className={`p-6 w-full border-2 ${
+            !isCart && 'border-b-0'
+          } border-dark text-center`}
           onChange={qttChangeHandler}
         />
         <button
@@ -62,12 +83,14 @@ const QuantityForm = ({ product }) => {
           +
         </button>
       </div>
-      <button
-        onClick={addItemHandler}
-        className="inline-block p-4 border-[3px] border-dark bg-dark text-[0.84rem] uppercase font-bold text-white transition-all ease-in-out hover:bg-white hover:text-dark "
-      >
-        Add to cart
-      </button>
+      {!isCart && (
+        <button
+          onClick={addItemHandler}
+          className="inline-block p-4 border-[3px] border-dark bg-dark text-[0.84rem] uppercase font-bold text-white transition-all ease-in-out hover:bg-white hover:text-dark "
+        >
+          Add to cart
+        </button>
+      )}
     </form>
   );
 };

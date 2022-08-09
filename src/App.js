@@ -10,7 +10,7 @@ import NotFound from './pages/NotFound';
 import ScrollToTop from './helpers/ScrollToTop';
 import Layout from './components/Layout';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { cartActions } from './store/cartSlice';
 
 function App() {
