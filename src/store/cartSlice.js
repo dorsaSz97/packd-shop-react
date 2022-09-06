@@ -12,7 +12,6 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       const qtt = action.payload.quantity ? action.payload.quantity : 1;
-      console.log(action.payload);
       if (
         state.items.filter(item => item.id === action.payload.id).length === 0
       ) {
@@ -28,7 +27,6 @@ const cartSlice = createSlice({
       }
       state.totalPrice = state.totalPrice + action.payload.price * qtt;
       state.totalQuantity = state.totalQuantity + qtt;
-      console.log(state.totalQuantity);
 
       localStorage.setItem('cartItems', JSON.stringify(state.items));
     },

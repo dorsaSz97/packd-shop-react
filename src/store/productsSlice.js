@@ -28,17 +28,14 @@ const productsSlice = createSlice({
       state.products = [...action.payload];
       state.refinedProducts = action.payload;
       state.totalProducts = state.refinedProducts.length;
-      console.log(state.products);
     },
 
     refineData(state, action) {
-      console.log(action.payload.sortTerm, action.payload.filterTerm);
       state.filterTerm = action.payload.filterTerm;
       state.sortTerm = action.payload.sortTerm;
 
       let productsArr = [];
 
-      console.log(state.products);
       if (action.payload.filterTerm) {
         productsArr = state.products.filter(
           product => action.payload.filterTerm === product.category

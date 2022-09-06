@@ -16,7 +16,6 @@ const useSignup = () => {
     })
       .then(res => {
         if (res.ok) {
-          console.log('done');
           setIsLoading(false);
           return res.json();
         } else {
