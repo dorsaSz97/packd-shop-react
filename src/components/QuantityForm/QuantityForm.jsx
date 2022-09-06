@@ -3,26 +3,28 @@ import { useDispatch } from 'react-redux';
 
 import { cartActions } from '../../store/cartSlice';
 
-const QuantityForm = ({ product, isCart = false }) => {
+const QuantityForm = ({ product, isCart = false, readonly = false }) => {
   const dispatch = useDispatch();
   const [qttValue, setQttValue] = useState(isCart ? product.quantity : 1);
   const qttInputRef = useRef();
 
   const addItemHandler = e => {
     e.preventDefault();
+    let quantityValue = +qttInputRef.current.value;
 
     dispatch(
       cartActions.addItem({
         id: product.id,
         name: product.name,
         price: product.price,
-        quantity: +qttInputRef.current.value,
+        quantity: quantityValue,
         thumbnail: product.thumbnail,
       })
     );
   };
 
   const qttChangeHandler = e => {
+    if (isNaN(+e.target.value) || +e.target.value < 1) return;
     setQttValue(+e.target.value);
   };
 
@@ -43,6 +45,9 @@ const QuantityForm = ({ product, isCart = false }) => {
     }
   };
   const decQtt = () => {
+    let quantityValue = +qttInputRef.current.value;
+    if (quantityValue === 1) return;
+
     if (isCart) {
       setQttValue(product.quantity - 1);
       dispatch(cartActions.removeItem(product.id));
@@ -70,10 +75,11 @@ const QuantityForm = ({ product, isCart = false }) => {
           id="quantity"
           ref={qttInputRef}
           value={qttValue}
-          className={`p-6 w-full border-2 ${
-            !isCart && 'border-b-0'
+          className={`p-6 w-full border-2 ${!isCart && 'border-b-0'} ${
+            readonly ? 'cursor-default' : 'cursor-text'
           } border-dark text-center`}
           onChange={qttChangeHandler}
+          readOnly={readonly}
         />
         <button
           type="button"

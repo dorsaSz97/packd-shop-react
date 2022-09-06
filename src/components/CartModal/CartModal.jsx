@@ -63,7 +63,11 @@ const CartModalContent = () => {
                       />
                       <div className="w-[55%] md:w-[30%]">
                         <p className="mb-3">{item.name}</p>
-                        <QuantityForm isCart={true} product={item} />
+                        <QuantityForm
+                          isCart={true}
+                          product={item}
+                          readonly={true}
+                        />
                       </div>
                       <span className="text-[1rem] font-bold">
                         {/* {item.quantity} x ${item.price.toFixed(2)} */}$
