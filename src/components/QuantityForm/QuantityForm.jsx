@@ -46,7 +46,7 @@ const QuantityForm = ({ product, isCart = false, readonly = false }) => {
   };
   const decQtt = () => {
     let quantityValue = +qttInputRef.current.value;
-    if (quantityValue === 1) return;
+    if (!readonly && quantityValue === 1) return;
 
     if (isCart) {
       setQttValue(product.quantity - 1);
