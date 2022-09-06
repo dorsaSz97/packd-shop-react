@@ -54,6 +54,7 @@ const Signup = () => {
         onSubmit={submitSignupHandler}
       >
         <input
+          autoComplete="off"
           id="email"
           value={emailInput}
           type="text"

@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -21,6 +21,7 @@ const Products = () => {
 
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
+  const productsTopRef = useRef();
 
   const currCategory = useSelector(state => state.products.currProduct);
   const refinedProducts = useSelector(state => state.products.refinedProducts);
@@ -30,7 +31,7 @@ const Products = () => {
   ]);
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0);
+    productsTopRef?.current?.scrollIntoView();
   }, [currentPage]);
 
   useEffect(() => {
@@ -139,7 +140,10 @@ const Products = () => {
 
           <FeaturesSlider />
 
-          <div className="py-10 px-4 md:px-8 lg:px-12">
+          <div
+            className="py-10 px-4 md:px-8 scroll-m-[4.5rem] lg:px-12"
+            ref={productsTopRef}
+          >
             <div className="flex justify-between">
               <span className="text-[1rem] uppercase font-bold">
                 {displayedData.length} products
