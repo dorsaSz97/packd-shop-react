@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-const URL = 'https://react-http-exerc-default-rtdb.firebaseio.com/';
-
 const useSignup = () => {
   const [isError, setIsError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -9,7 +7,7 @@ const useSignup = () => {
 
   const sendData = email => {
     // send the value to the firebase
-    fetch(`${URL}signups.json`, {
+    fetch(`${process.env.REACT_APP_FIREBASE_URL}signups.json`, {
       method: 'POST',
       body: JSON.stringify({ email: email }),
       headers: {
